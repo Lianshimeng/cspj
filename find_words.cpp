@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-void ct(string str1,int i){
+void ct(string & str1, int i){
     for(int d = i; d <= i+9; d++){
         cout << str1[d];
     }
