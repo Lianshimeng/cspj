@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <string>
 using namespace std;
 
 void ct(string str1,int i){
@@ -10,13 +11,13 @@ void ct(string str1,int i){
 
 int main(){
     string str1,str;
-    cin.getline(str, 10000);
+    getline(cin,str1);
     str = str1;
     transform(str.begin(),str.end(),str.begin(),::tolower);
     int n = str.size();
 
     string s = "aisichuang";
-    int cnt = 1;
+    int cnt = 0;
     bool c = true;
 
     for(int i = 0; i <= n-10; i++){
@@ -26,7 +27,7 @@ int main(){
                 break;
             }
         }
-        if(c == true && cnt <= 5){
+        if(c == true && cnt < 5){
             ct(str1,i);
             cout << endl;
             cnt++;
@@ -39,7 +40,7 @@ int main(){
         }
     }
 
-    if(cnt > 5){
+    if(cnt >= 5){
         cout << cnt;
     }
 }
