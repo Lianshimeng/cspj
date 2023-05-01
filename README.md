@@ -1,1 +1,1 @@
-# cspj
+# contest for cspj exams
